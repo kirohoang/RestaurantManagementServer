@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RestaurantManagementServer.Models;
+namespace RestaurantManagementServer.Models.Entities;
 
 public partial class OrderDetail
 {

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
+using RestaurantManagementServer.Models.Entities;
 
-namespace RestaurantManagementServer.Models;
+namespace RestaurantManagementServer.Data;
 
 public partial class FinalTermContext : DbContext
 {
@@ -37,7 +38,7 @@ public partial class FinalTermContext : DbContext
     {
         modelBuilder.Entity<Branch>(entity =>
         {
-            entity.HasKey(e => e.BranchId).HasName("PK__BRANCH__766E0D2357A0D9C6");
+            entity.HasKey(e => e.BranchId).HasName("PK__BRANCH__766E0D238E2EAE97");
 
             entity.ToTable("BRANCH");
 
@@ -54,7 +55,7 @@ public partial class FinalTermContext : DbContext
 
         modelBuilder.Entity<Customer>(entity =>
         {
-            entity.HasKey(e => e.CustomerId).HasName("PK__CUSTOMER__1CE12D37DF1EDEAA");
+            entity.HasKey(e => e.CustomerId).HasName("PK__CUSTOMER__1CE12D37A604D041");
 
             entity.ToTable("CUSTOMERS");
 
@@ -87,7 +88,7 @@ public partial class FinalTermContext : DbContext
 
         modelBuilder.Entity<CustomerDetail>(entity =>
         {
-            entity.HasKey(e => e.CustomerDetailId).HasName("PK__CUSTOMER__9A908FFEBA7176D6");
+            entity.HasKey(e => e.CustomerDetailId).HasName("PK__CUSTOMER__9A908FFEB60EFC0D");
 
             entity.ToTable("CUSTOMER_DETAILS");
 
@@ -103,16 +104,17 @@ public partial class FinalTermContext : DbContext
 
             entity.HasOne(d => d.Customer).WithMany(p => p.CustomerDetails)
                 .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__CUSTOMER___CUSTO__4BAC3F29");
+                .HasConstraintName("FK__CUSTOMER___CUSTO__5441852A");
         });
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__ORDERS__460A94640670ED22");
+            entity.HasKey(e => e.OrderId).HasName("PK__ORDERS__460A946417B9EF7E");
 
             entity.ToTable("ORDERS");
 
             entity.Property(e => e.OrderId).HasColumnName("ORDER_ID");
+            entity.Property(e => e.BranchId).HasColumnName("BRANCH_ID");
             entity.Property(e => e.CustomerId).HasColumnName("CUSTOMER_ID");
             entity.Property(e => e.Ispayment)
                 .HasMaxLength(255)
@@ -136,22 +138,26 @@ public partial class FinalTermContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("STATUS");
 
+            entity.HasOne(d => d.Branch).WithMany(p => p.Orders)
+                .HasForeignKey(d => d.BranchId)
+                .HasConstraintName("FK__ORDERS__BRANCH_I__4D94879B");
+
             entity.HasOne(d => d.Customer).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__ORDERS__CUSTOMER__5535A963");
+                .HasConstraintName("FK__ORDERS__CUSTOMER__4AB81AF0");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__ORDERS__PRODUCT___5629CD9C");
+                .HasConstraintName("FK__ORDERS__PRODUCT___4BAC3F29");
 
             entity.HasOne(d => d.Seat).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.SeatId)
-                .HasConstraintName("FK__ORDERS__SEAT_ID__571DF1D5");
+                .HasConstraintName("FK__ORDERS__SEAT_ID__4CA06362");
         });
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.OrderDetailsId).HasName("PK__ORDER_DE__4DAAE6F040AC39CB");
+            entity.HasKey(e => e.OrderDetailsId).HasName("PK__ORDER_DE__4DAAE6F08F9E6DFF");
 
             entity.ToTable("ORDER_DETAILS");
 
@@ -161,19 +167,19 @@ public partial class FinalTermContext : DbContext
                 .HasColumnType("decimal(10, 2)")
                 .HasColumnName("PRICE");
             entity.Property(e => e.ProductName)
-                .HasMaxLength(1)
+                .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("PRODUCT_NAME");
             entity.Property(e => e.Quantity).HasColumnName("QUANTITY");
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__ORDER_DET__ORDER__59FA5E80");
+                .HasConstraintName("FK__ORDER_DET__ORDER__571DF1D5");
         });
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__PRODUCTS__52B417639DFB4A5F");
+            entity.HasKey(e => e.ProductId).HasName("PK__PRODUCTS__52B4176357945866");
 
             entity.ToTable("PRODUCTS");
 
@@ -193,6 +199,7 @@ public partial class FinalTermContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("PRODUCT_NAME");
+            entity.Property(e => e.Quantity).HasColumnName("QUANTITY");
             entity.Property(e => e.Type)
                 .HasMaxLength(255)
                 .IsUnicode(false)
@@ -201,16 +208,12 @@ public partial class FinalTermContext : DbContext
 
         modelBuilder.Entity<Seat>(entity =>
         {
-            entity.HasKey(e => e.SeatId).HasName("PK__SEATS__79B899236B4DF5CE");
+            entity.HasKey(e => e.SeatId).HasName("PK__SEATS__79B89923B95A5B97");
 
             entity.ToTable("SEATS");
 
-            entity.Property(e => e.SeatId)
-                .ValueGeneratedNever()
-                .HasColumnName("SEAT_ID");
-            entity.Property(e => e.BranchId)
-                .ValueGeneratedOnAdd()
-                .HasColumnName("BRANCH_ID");
+            entity.Property(e => e.SeatId).HasColumnName("SEAT_ID");
+            entity.Property(e => e.BranchId).HasColumnName("BRANCH_ID");
             entity.Property(e => e.Status)
                 .HasMaxLength(255)
                 .IsUnicode(false)
@@ -218,8 +221,7 @@ public partial class FinalTermContext : DbContext
 
             entity.HasOne(d => d.Branch).WithMany(p => p.Seats)
                 .HasForeignKey(d => d.BranchId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__SEATS__BRANCH_ID__52593CB8");
+                .HasConstraintName("FK__SEATS__BRANCH_ID__403A8C7D");
         });
 
         OnModelCreatingPartial(modelBuilder);

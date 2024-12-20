@@ -5174,11 +5174,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\CMP170_WindowProgramming\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\RestaurantManagementServer.csproj",
+      "projectUniqueName": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\RestaurantManagementServer.csproj",
       "projectName": "RestaurantManagementServer",
-      "projectPath": "D:\\CMP170_WindowProgramming\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\RestaurantManagementServer.csproj",
+      "projectPath": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\RestaurantManagementServer.csproj",
       "packagesPath": "C:\\Users\\trung\\.nuget\\packages\\",
-      "outputPath": "D:\\CMP170_WindowProgramming\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\obj\\",
+      "outputPath": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\trung\\AppData\\Roaming\\NuGet\\NuGet.Config",

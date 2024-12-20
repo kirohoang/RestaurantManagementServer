@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RestaurantManagementServer.Models;
+namespace RestaurantManagementServer.Models.Entities;
 
 public partial class CustomerDetail
 {
@@ -9,9 +9,9 @@ public partial class CustomerDetail
 
     public int? CustomerId { get; set; }
 
-    public decimal? CustomerBudget { get; set; }
+    public decimal CustomerBudget { get; set; }
 
-    public string? Status { get; set; }
+    public string Status { get; set; } = null!;
 
     public virtual Customer? Customer { get; set; }
 }

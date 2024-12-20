@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace RestaurantManagementServer.Models;
+namespace RestaurantManagementServer.Models.Entities;
 
 public partial class Order
 {
@@ -13,6 +13,8 @@ public partial class Order
 
     public int? SeatId { get; set; }
 
+    public int? BranchId { get; set; }
+
     public string Status { get; set; } = null!;
 
     public DateTime OrderDate { get; set; }
@@ -22,6 +24,8 @@ public partial class Order
     public string Ispayment { get; set; } = null!;
 
     public string PaymentMethod { get; set; } = null!;
+
+    public virtual Branch? Branch { get; set; }
 
     public virtual Customer? Customer { get; set; }
 
