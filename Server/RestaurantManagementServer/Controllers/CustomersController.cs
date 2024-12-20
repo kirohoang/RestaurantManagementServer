@@ -79,12 +79,14 @@ namespace RestaurantManagementServer.Controllers
             return Ok(customer);
         }
 
-        private int randomOTP()
+        private static int randomOTP()
         {
             Random random = new Random();
 
             return random.Next(100000, 999999);
         }
+
+        private static int sendOTP = randomOTP();
 
         private void sendMail(string receiveEmail)
         {
@@ -95,7 +97,7 @@ namespace RestaurantManagementServer.Controllers
             mailMessage.From = new MailAddress(fromMail);
             mailMessage.Subject = "RESET PASSWORD FROM TRUNG'S PALACE";
             mailMessage.To.Add(new MailAddress(receiveEmail));
-            mailMessage.Body = $"Here is your OTP to reset your password {randomOTP()}";
+            mailMessage.Body = $"Here is your OTP to reset your password {sendOTP}";
 
             var smtpClient = new SmtpClient("smtp.gmail.com")
             {
@@ -107,22 +109,36 @@ namespace RestaurantManagementServer.Controllers
             smtpClient.Send(mailMessage);
         }
 
-        [HttpPut]
+        [HttpGet]
         [Route("{email}")]
-        public IActionResult updateCustomerPassword(string email, UpdateCustomerPassword updateCustomerPassword)
+        public IActionResult sendEmail(string email)
         {
-            var customer = customerContext.Customers.FirstOrDefault(c => c.Email == email);
+            sendMail(email);
+            return Ok("Sent");
+        }
+
+        [HttpPut]
+        [Route("{otp:int}")]
+        public IActionResult updateCustomerPassword(int OTP, int id, UpdateCustomerPassword updateCustomerPassword)
+        {
+
+            var customer = customerContext.Customers.Find(id);
 
             if (customer is null)
             {
                 return NotFound("Email doesn't exists");
             }
-
+            if (OTP != sendOTP)
+            {
+                return BadRequest("Wrong OTP. Please try again!");
+            }
             customer.Password = updateCustomerPassword.Password;
             customerContext.SaveChanges();
 
             return Ok(customer);
         }
+
+        
 
         [HttpDelete]
         [Route("{id:int}")]
