@@ -68,7 +68,7 @@ namespace RestaurantManagementServer.Controllers
                 }
                 customerDetails.CustomerBudget -= transaction.Amount;
             }
-            else
+            else // Purchase
             {
                 customerDetails.CustomerBudget -= transaction.Amount;
             }

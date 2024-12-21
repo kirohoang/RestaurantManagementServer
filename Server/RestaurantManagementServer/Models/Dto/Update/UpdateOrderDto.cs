@@ -3,7 +3,6 @@
     public class UpdateOrderDto
     {
 
-        public string Isship { get; set; } = null!;
 
         public string Ispayment { get; set; } = null!;
 

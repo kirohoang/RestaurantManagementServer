@@ -113,6 +113,12 @@ namespace RestaurantManagementServer.Controllers
         [Route("{email}")]
         public IActionResult sendEmail(string email)
         {
+            var customerMail = customerContext.Customers.FirstOrDefault(c => c.Email == email);
+
+            if (customerMail is null)
+            {
+                return NotFound("Email doesn't exist");
+            }
             sendMail(email);
             return Ok("Sent");
         }
@@ -129,7 +135,7 @@ namespace RestaurantManagementServer.Controllers
         }
 
         [HttpPut]
-        [Route("{email}")]
+        [Route("update-email/{email}")]
         public IActionResult updateCustomerPassword(int id, UpdateCustomerPassword updateCustomerPassword)
         {
 

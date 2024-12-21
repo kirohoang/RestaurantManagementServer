@@ -201,32 +201,6 @@
   },
   {
     "ContainingType": "RestaurantManagementServer.Controllers.CustomersController",
-    "Method": "updateCustomerPassword",
-    "RelativePath": "api/Customers/{email}",
-    "HttpMethod": "PUT",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "updateCustomerPassword",
-        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerPassword",
-        "IsRequired": true
-      },
-      {
-        "Name": "email",
-        "Type": "",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RestaurantManagementServer.Controllers.CustomersController",
     "Method": "getCustomerById",
     "RelativePath": "api/Customers/{id}",
     "HttpMethod": "GET",
@@ -289,6 +263,32 @@
       {
         "Name": "otp",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.CustomersController",
+    "Method": "updateCustomerPassword",
+    "RelativePath": "api/Customers/update-email/{email}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateCustomerPassword",
+        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerPassword",
+        "IsRequired": true
+      },
+      {
+        "Name": "email",
+        "Type": "",
         "IsRequired": true
       }
     ],

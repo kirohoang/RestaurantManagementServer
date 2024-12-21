@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "D:\\RestaurantManagementServer\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\models\\dto\\add\\addorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\models\\dto\\add\\addorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\models\\dto\\update\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\models\\dto\\update\\updateorderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\controllers\\transactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -26,11 +42,63 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "UpdateOrderDto.cs",
+              "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Update\\UpdateOrderDto.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Dto\\Update\\UpdateOrderDto.cs",
+              "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Update\\UpdateOrderDto.cs*",
+              "RelativeToolTip": "RestaurantManagementServer\\Models\\Dto\\Update\\UpdateOrderDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T10:26:44.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AddOrderDto.cs",
+              "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs",
+              "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs*",
+              "RelativeToolTip": "RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T10:26:34.188Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\OrdersController.cs",
+              "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\OrdersController.cs*",
+              "RelativeToolTip": "RestaurantManagementServer\\Controllers\\OrdersController.cs*",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAmwEUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T10:26:01.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CustomersController.cs",
+              "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\CustomersController.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\CustomersController.cs",
+              "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\CustomersController.cs",
+              "RelativeToolTip": "RestaurantManagementServer\\Controllers\\CustomersController.cs",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAIwHkAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-21T09:56:24.629Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "UpdateTransactionDto.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Update\\UpdateTransactionDto.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Dto\\Update\\UpdateTransactionDto.cs",
@@ -38,12 +106,11 @@
               "RelativeToolTip": "RestaurantManagementServer\\Models\\Dto\\Update\\UpdateTransactionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T07:37:37.681Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T07:37:37.681Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Transaction.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Entities\\Transaction.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Entities\\Transaction.cs",
@@ -51,12 +118,11 @@
               "RelativeToolTip": "RestaurantManagementServer\\Models\\Entities\\Transaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAqwAkAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T07:34:48.469Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T07:34:48.469Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "AddTransactionDto.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Add\\AddTransactionDto.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Dto\\Add\\AddTransactionDto.cs",
@@ -64,18 +130,17 @@
               "RelativeToolTip": "RestaurantManagementServer\\Models\\Dto\\Add\\AddTransactionDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-21T07:34:44.718Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-21T07:34:44.718Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "TransactionsController.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\TransactionsController.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\TransactionsController.cs",
               "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\TransactionsController.cs",
               "RelativeToolTip": "RestaurantManagementServer\\Controllers\\TransactionsController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAAwEEAAAAlAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAwEYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-21T07:16:31.313Z",
               "EditorCaption": ""

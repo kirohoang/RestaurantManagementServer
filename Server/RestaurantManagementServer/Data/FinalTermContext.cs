@@ -111,7 +111,7 @@ public partial class FinalTermContext : DbContext
 
         modelBuilder.Entity<Order>(entity =>
         {
-            entity.HasKey(e => e.OrderId).HasName("PK__ORDERS__460A94644F6F9EDA");
+            entity.HasKey(e => e.OrderId).HasName("PK__ORDERS__460A94648B630025");
 
             entity.ToTable("ORDERS");
 
@@ -122,10 +122,6 @@ public partial class FinalTermContext : DbContext
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("ISPAYMENT");
-            entity.Property(e => e.Isship)
-                .HasMaxLength(255)
-                .IsUnicode(false)
-                .HasColumnName("ISSHIP");
             entity.Property(e => e.OrderDate)
                 .HasColumnType("datetime")
                 .HasColumnName("ORDER_DATE");
@@ -138,24 +134,24 @@ public partial class FinalTermContext : DbContext
 
             entity.HasOne(d => d.Branch).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.BranchId)
-                .HasConstraintName("FK__ORDERS__BRANCH_I__45F365D3");
+                .HasConstraintName("FK__ORDERS__BRANCH_I__5FB337D6");
 
             entity.HasOne(d => d.Customer).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.CustomerId)
-                .HasConstraintName("FK__ORDERS__CUSTOMER__4316F928");
+                .HasConstraintName("FK__ORDERS__CUSTOMER__5CD6CB2B");
 
             entity.HasOne(d => d.Product).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK__ORDERS__PRODUCT___440B1D61");
+                .HasConstraintName("FK__ORDERS__PRODUCT___5DCAEF64");
 
             entity.HasOne(d => d.Seat).WithMany(p => p.Orders)
                 .HasForeignKey(d => d.SeatId)
-                .HasConstraintName("FK__ORDERS__SEAT_ID__44FF419A");
+                .HasConstraintName("FK__ORDERS__SEAT_ID__5EBF139D");
         });
 
         modelBuilder.Entity<OrderDetail>(entity =>
         {
-            entity.HasKey(e => e.OrderDetailsId).HasName("PK__ORDER_DE__4DAAE6F064CA8AC7");
+            entity.HasKey(e => e.OrderDetailsId).HasName("PK__ORDER_DE__4DAAE6F05E7FB1F7");
 
             entity.ToTable("ORDER_DETAILS");
 
@@ -172,7 +168,7 @@ public partial class FinalTermContext : DbContext
 
             entity.HasOne(d => d.Order).WithMany(p => p.OrderDetails)
                 .HasForeignKey(d => d.OrderId)
-                .HasConstraintName("FK__ORDER_DET__ORDER__48CFD27E");
+                .HasConstraintName("FK__ORDER_DET__ORDER__628FA481");
         });
 
         modelBuilder.Entity<Product>(entity =>

@@ -17,8 +17,6 @@ public partial class Order
 
     public DateTime OrderDate { get; set; }
 
-    public string Isship { get; set; } = null!;
-
     public string Ispayment { get; set; } = null!;
 
     public string PaymentMethod { get; set; } = null!;

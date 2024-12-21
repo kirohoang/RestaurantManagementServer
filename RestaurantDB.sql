@@ -65,7 +65,6 @@ CREATE TABLE ORDERS
 	SEAT_ID INT,
 	BRANCH_ID INT,
 	ORDER_DATE DATETIME NOT NULL,
-	ISSHIP VARCHAR(255) NOT NULL, -- True or False || True mean online order ||  False mean offline booking
 	ISPAYMENT VARCHAR(255) NOT NULL, -- True or False
 	PAYMENT_METHOD VARCHAR(255) NOT NULL, -- Cash Or Transfer
 	
