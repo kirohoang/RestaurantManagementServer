@@ -22,4 +22,6 @@ public partial class Customer
     public virtual ICollection<CustomerDetail> CustomerDetails { get; set; } = new List<CustomerDetail>();
 
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
+
+    public virtual ICollection<Transaction> Transactions { get; set; } = new List<Transaction>();
 }

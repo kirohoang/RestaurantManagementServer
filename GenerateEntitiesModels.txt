@@ -1,0 +1,1 @@
+Scaffold-DbContext "Server=KIROLAPTOP\SQLEXPRESS01;Database=FinalTerm;Trusted_connection=true;TrustServerCertificate=true"Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models\Entities

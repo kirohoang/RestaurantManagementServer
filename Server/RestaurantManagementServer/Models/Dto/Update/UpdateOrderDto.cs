@@ -2,7 +2,6 @@
 {
     public class UpdateOrderDto
     {
-        public string Status { get; set; } = null!;
 
         public string Isship { get; set; } = null!;
 

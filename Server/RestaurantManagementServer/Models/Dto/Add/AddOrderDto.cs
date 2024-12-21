@@ -12,7 +12,6 @@
 
         public int? Quantity { get; set; }
 
-        public string Status { get; set; } = null!;
 
         public DateTime OrderDate { get; set; }
 

@@ -187,13 +187,39 @@
     "ContainingType": "RestaurantManagementServer.Controllers.CustomersController",
     "Method": "sendEmail",
     "RelativePath": "api/Customers/{email}",
-    "HttpMethod": "GET",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
         "Name": "email",
         "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.CustomersController",
+    "Method": "updateCustomerPassword",
+    "RelativePath": "api/Customers/{email}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "updateCustomerPassword",
+        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerPassword",
+        "IsRequired": true
+      },
+      {
+        "Name": "email",
+        "Type": "",
         "IsRequired": true
       }
     ],
@@ -254,25 +280,15 @@
   },
   {
     "ContainingType": "RestaurantManagementServer.Controllers.CustomersController",
-    "Method": "updateCustomerPassword",
-    "RelativePath": "api/Customers/{otp}",
-    "HttpMethod": "PUT",
+    "Method": "checkOTP",
+    "RelativePath": "api/Customers/check-otp/{otp}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "OTP",
+        "Name": "otp",
         "Type": "System.Int32",
-        "IsRequired": true
-      },
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      },
-      {
-        "Name": "updateCustomerPassword",
-        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerPassword",
         "IsRequired": true
       }
     ],
@@ -582,6 +598,85 @@
     "ContainingType": "RestaurantManagementServer.Controllers.SeatsController",
     "Method": "deleteSeatById",
     "RelativePath": "api/Seats/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.TransactionsController",
+    "Method": "getAllTransactions",
+    "RelativePath": "api/Transactions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.TransactionsController",
+    "Method": "addTransaction",
+    "RelativePath": "api/Transactions",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "addTransactionDto",
+        "Type": "RestaurantManagementServer.Models.Dto.Add.AddTransactionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.TransactionsController",
+    "Method": "getTransactionById",
+    "RelativePath": "api/Transactions/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.TransactionsController",
+    "Method": "updateTransaction",
+    "RelativePath": "api/Transactions/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "addTransactionDto",
+        "Type": "RestaurantManagementServer.Models.Dto.Add.AddTransactionDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.TransactionsController",
+    "Method": "deleteTransaction",
+    "RelativePath": "api/Transactions/{id}",
     "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,

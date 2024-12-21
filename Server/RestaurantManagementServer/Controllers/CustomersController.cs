@@ -109,7 +109,7 @@ namespace RestaurantManagementServer.Controllers
             smtpClient.Send(mailMessage);
         }
 
-        [HttpGet]
+        [HttpPost]
         [Route("{email}")]
         public IActionResult sendEmail(string email)
         {
@@ -117,9 +117,20 @@ namespace RestaurantManagementServer.Controllers
             return Ok("Sent");
         }
 
+        [HttpGet]
+        [Route("check-otp/{otp:int}")]
+        public IActionResult checkOTP(int otp)
+        {
+            if (otp == sendOTP)
+            {
+                return Ok("OTP is correct");
+            }
+            return BadRequest("OTP is incorrect");
+        }
+
         [HttpPut]
-        [Route("{otp:int}")]
-        public IActionResult updateCustomerPassword(int OTP, int id, UpdateCustomerPassword updateCustomerPassword)
+        [Route("{email}")]
+        public IActionResult updateCustomerPassword(int id, UpdateCustomerPassword updateCustomerPassword)
         {
 
             var customer = customerContext.Customers.Find(id);
@@ -128,17 +139,11 @@ namespace RestaurantManagementServer.Controllers
             {
                 return NotFound("Email doesn't exists");
             }
-            if (OTP != sendOTP)
-            {
-                return BadRequest("Wrong OTP. Please try again!");
-            }
             customer.Password = updateCustomerPassword.Password;
             customerContext.SaveChanges();
 
             return Ok(customer);
         }
-
-        
 
         [HttpDelete]
         [Route("{id:int}")]

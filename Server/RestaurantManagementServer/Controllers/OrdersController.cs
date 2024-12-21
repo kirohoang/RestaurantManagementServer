@@ -47,7 +47,6 @@ namespace RestaurantManagementServer.Controllers
                 CustomerId = addOrderDto.CustomerId,
                 ProductId = addOrderDto.ProductId,
                 SeatId = addOrderDto.SeatId,
-                Status = addOrderDto.Status,
                 BranchId = addOrderDto.BranchId,
                 OrderDate = addOrderDto.OrderDate,
                 Isship = addOrderDto.Isship,
@@ -70,7 +69,6 @@ namespace RestaurantManagementServer.Controllers
             {
                 return NotFound("Order doesn't exist");
             }
-            order.Status = updateOrderDto.Status;
             order.Isship = updateOrderDto.Isship;
             order.Ispayment = updateOrderDto.Ispayment;
             order.PaymentMethod = updateOrderDto.PaymentMethod;
