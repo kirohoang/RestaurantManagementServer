@@ -40,6 +40,19 @@ namespace RestaurantManagementServer.Controllers
             return Ok(customer);
         }
 
+        [HttpGet]
+        [Route("get-customer-by-username/{username}")]
+        public IActionResult getCustomerByUsername(string username)
+        {
+            var customer = customerContext.Customers.FirstOrDefault(c => c.Username == username);
+            if (customer is null)
+            {
+                return NotFound(customerNotFound);
+            }
+
+            return Ok(customer);
+        }
+
         [HttpPost]
         public IActionResult addCustomer(AddCustomerDto addCustomerDto)
         {
@@ -135,21 +148,34 @@ namespace RestaurantManagementServer.Controllers
         }
 
         [HttpPut]
-        [Route("update-email/{email}")]
-        public IActionResult updateCustomerPassword(int id, UpdateCustomerPassword updateCustomerPassword)
+        [Route("update-password/{email}")]
+        public IActionResult updateCustomerPassword(string email, UpdateCustomerPassword updateCustomerPassword)
         {
+            if (updateCustomerPassword == null || string.IsNullOrEmpty(updateCustomerPassword.Password))
+            {
+                return BadRequest("Invalid password data.");
+            }
 
-            var customer = customerContext.Customers.Find(id);
+            var customer = customerContext.Customers.FirstOrDefault(c => c.Email == email);
 
             if (customer is null)
             {
-                return NotFound("Email doesn't exists");
+                return NotFound("Email doesn't exist.");
             }
+
             customer.Password = updateCustomerPassword.Password;
-            customerContext.SaveChanges();
+            try
+            {
+                customerContext.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, $"Internal server error: {ex.Message}");
+            }
 
             return Ok(customer);
         }
+
 
         [HttpDelete]
         [Route("{id:int}")]

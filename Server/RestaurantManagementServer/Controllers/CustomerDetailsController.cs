@@ -40,6 +40,19 @@ namespace RestaurantManagementServer.Controllers
             return Ok(customerDetails);
         }
 
+        [HttpGet]
+        [Route("get-customer-details-by-customer-id/{customerId:int}")]
+        public IActionResult getCustomerDetailsByCustomerId(int customerId)
+        {
+            var customerDetails = customerDetailsContext.CustomerDetails.FirstOrDefault(cd => cd.CustomerId == customerId);
+            if (customerDetails is null)
+            {
+                return NotFound(customerNotFound);
+            }
+
+            return Ok(customerDetails);
+        }
+
         [HttpPost]
         public IActionResult addCustomer(AddCustomerDetailsDto addCustomerDetailsDto)
         {
