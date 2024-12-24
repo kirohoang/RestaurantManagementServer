@@ -90,7 +90,7 @@
   },
   {
     "ContainingType": "RestaurantManagementServer.Controllers.CustomerDetailsController",
-    "Method": "addCustomer",
+    "Method": "addCustomerDetails",
     "RelativePath": "api/CustomerDetails",
     "HttpMethod": "POST",
     "IsController": true,
@@ -168,6 +168,27 @@
       {
         "Name": "customerId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.CustomerDetailsController",
+    "Method": "updateCustomerDetailsBudget",
+    "RelativePath": "api/CustomerDetails/update-budget/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateCustomerDetailsDto",
+        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerDetailsDto",
         "IsRequired": true
       }
     ],

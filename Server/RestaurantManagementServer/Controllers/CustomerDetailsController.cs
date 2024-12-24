@@ -54,7 +54,7 @@ namespace RestaurantManagementServer.Controllers
         }
 
         [HttpPost]
-        public IActionResult addCustomer(AddCustomerDetailsDto addCustomerDetailsDto)
+        public IActionResult addCustomerDetails(AddCustomerDetailsDto addCustomerDetailsDto)
         {
             var customerDetails = new CustomerDetail()
             {
@@ -81,6 +81,24 @@ namespace RestaurantManagementServer.Controllers
             customersDetails.CustomerId = updateCustomerDetailsDto.CustomerId;
             customersDetails.CustomerBudget = updateCustomerDetailsDto.CustomerBudget;
             customersDetails.Status = updateCustomerDetailsDto.Status;
+
+            customerDetailsContext.SaveChanges();
+
+            return Ok(customersDetails);
+        }
+
+        [HttpPut]
+        [Route("update-budget/{id:int}")]
+        public IActionResult updateCustomerDetailsBudget(int id, UpdateCustomerDetailsDto updateCustomerDetailsDto)
+        {
+            var customersDetails = customerDetailsContext.CustomerDetails.Find(id);
+
+            if (customersDetails is null)
+            {
+                return NotFound(customerNotFound);
+            }
+
+            customersDetails.CustomerBudget = updateCustomerDetailsDto.CustomerBudget;
 
             customerDetailsContext.SaveChanges();
 
