@@ -89,7 +89,7 @@ namespace RestaurantManagementServer.Controllers
 
         [HttpPut]
         [Route("update-budget/{id:int}")]
-        public IActionResult updateCustomerDetailsBudget(int id, UpdateCustomerDetailsDto updateCustomerDetailsDto)
+        public IActionResult updateCustomerDetailsBudget(int id, UpdateCustomerBudgetDto updateCustomerBudgetDto)
         {
             var customersDetails = customerDetailsContext.CustomerDetails.Find(id);
 
@@ -98,7 +98,7 @@ namespace RestaurantManagementServer.Controllers
                 return NotFound(customerNotFound);
             }
 
-            customersDetails.CustomerBudget = updateCustomerDetailsDto.CustomerBudget;
+            customersDetails.CustomerBudget += updateCustomerBudgetDto.CustomerBudget;
 
             customerDetailsContext.SaveChanges();
 

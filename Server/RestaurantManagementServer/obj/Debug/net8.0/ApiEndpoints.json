@@ -187,8 +187,8 @@
         "IsRequired": true
       },
       {
-        "Name": "updateCustomerDetailsDto",
-        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerDetailsDto",
+        "Name": "updateCustomerBudgetDto",
+        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerBudgetDto",
         "IsRequired": true
       }
     ],
@@ -574,6 +574,22 @@
       {
         "Name": "id",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.ProductsController",
+    "Method": "findProduct",
+    "RelativePath": "api/Products/find/{product_name}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "product_name",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

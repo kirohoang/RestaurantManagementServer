@@ -39,6 +39,20 @@ namespace RestaurantManagementServer.Controllers
             return Ok(product);
         }
 
+        [HttpGet]
+        [Route("find/{product_name}")]
+        public IActionResult findProduct(string product_name)
+        {
+            var product = productContext.Products.Where(p => p.ProductName.Contains(product_name)).ToList();
+
+            if (product is null)
+            {
+                return NotFound();
+            }
+
+            return Ok(product);
+        }
+
         [HttpPost]
         public IActionResult addProduct(AddProductDto addProductDto)
         {
