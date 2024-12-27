@@ -88,21 +88,37 @@ namespace RestaurantManagementServer.Controllers
         }
 
         [HttpPut]
-        [Route("update-budget/{id:int}")]
-        public IActionResult updateCustomerDetailsBudget(int id, UpdateCustomerBudgetDto updateCustomerBudgetDto)
+        [Route("update-budget/{customerId:int}")]
+        public IActionResult updateCustomerDetailsBudget(int customerId, UpdateCustomerBudgetDto updateCustomerBudgetDto)
         {
-            var customersDetails = customerDetailsContext.CustomerDetails.Find(id);
-
-            if (customersDetails is null)
+            var customerDetails = customerDetailsContext.CustomerDetails.FirstOrDefault(cd => cd.CustomerId == customerId);
+            if (customerDetails is null)
             {
                 return NotFound(customerNotFound);
             }
 
-            customersDetails.CustomerBudget += updateCustomerBudgetDto.CustomerBudget;
+            customerDetails.CustomerBudget += updateCustomerBudgetDto.CustomerBudget;
 
             customerDetailsContext.SaveChanges();
 
-            return Ok(customersDetails);
+            return Ok(customerDetails);
+        }
+
+        [HttpPut]
+        [Route("update-budget-after-order/{customerId:int}")]
+        public IActionResult updateCustomerDetailsBudgetAfterOrder(int customerId, UpdateCustomerBudgetDto updateCustomerBudgetDto)
+        {
+            var customerDetails = customerDetailsContext.CustomerDetails.FirstOrDefault(cd => cd.CustomerId == customerId);
+            if (customerDetails is null)
+            {
+                return NotFound(customerNotFound);
+            }
+
+            customerDetails.CustomerBudget = updateCustomerBudgetDto.CustomerBudget;
+
+            customerDetailsContext.SaveChanges();
+
+            return Ok(customerDetails);
         }
 
         [HttpDelete]

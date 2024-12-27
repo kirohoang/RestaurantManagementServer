@@ -27,10 +27,10 @@ namespace RestaurantManagementServer.Controllers
         }
 
         [HttpGet]
-        [Route("{id:int}")]
-        public IActionResult getOrderDetailsById(int id)
+        [Route("{orderId:int}")]
+        public IActionResult getOrderDetailsById(int orderId)
         {
-            var orderDetails = orderDetailsContext.OrderDetails.Find(id);
+            var orderDetails = orderDetailsContext.OrderDetails.FirstOrDefault(od => od.OrderId == orderId);
 
             if (orderDetails is null)
             {

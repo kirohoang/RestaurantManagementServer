@@ -175,14 +175,35 @@
   },
   {
     "ContainingType": "RestaurantManagementServer.Controllers.CustomerDetailsController",
-    "Method": "updateCustomerDetailsBudget",
-    "RelativePath": "api/CustomerDetails/update-budget/{id}",
+    "Method": "updateCustomerDetailsBudgetAfterOrder",
+    "RelativePath": "api/CustomerDetails/update-budget-after-order/{customerId}",
     "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "id",
+        "Name": "customerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updateCustomerBudgetDto",
+        "Type": "RestaurantManagementServer.Models.Dto.Update.UpdateCustomerBudgetDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.CustomerDetailsController",
+    "Method": "updateCustomerDetailsBudget",
+    "RelativePath": "api/CustomerDetails/update-budget/{customerId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "customerId",
         "Type": "System.Int32",
         "IsRequired": true
       },
@@ -370,22 +391,6 @@
   },
   {
     "ContainingType": "RestaurantManagementServer.Controllers.OrderDetailsController",
-    "Method": "getOrderDetailsById",
-    "RelativePath": "api/OrderDetails/{id}",
-    "HttpMethod": "GET",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "RestaurantManagementServer.Controllers.OrderDetailsController",
     "Method": "updateOrderDetails",
     "RelativePath": "api/OrderDetails/{id}",
     "HttpMethod": "PUT",
@@ -415,6 +420,22 @@
     "Parameters": [
       {
         "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "RestaurantManagementServer.Controllers.OrderDetailsController",
+    "Method": "getOrderDetailsById",
+    "RelativePath": "api/OrderDetails/{orderId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "orderId",
         "Type": "System.Int32",
         "IsRequired": true
       }

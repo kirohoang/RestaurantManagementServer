@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "D:\\RestaurantManagementServer\\Server\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\controllers\\orderdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\controllers\\customerdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\controllers\\customerdetailscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|d:\\restaurantmanagementserver\\server\\restaurantmanagementserver\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3F98F223-48F1-4A11-8951-3A1E49A31606}|RestaurantManagementServer\\RestaurantManagementServer.csproj|solutionrelative:restaurantmanagementserver\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -34,11 +42,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 235,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrderDetailsController.cs",
+              "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\OrderDetailsController.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\OrderDetailsController.cs",
+              "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\OrderDetailsController.cs",
+              "RelativeToolTip": "RestaurantManagementServer\\Controllers\\OrderDetailsController.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAwwCAAAABIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T08:18:11.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "CustomerDetailsController.cs",
+              "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\CustomerDetailsController.cs",
+              "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\CustomerDetailsController.cs",
+              "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\CustomerDetailsController.cs",
+              "RelativeToolTip": "RestaurantManagementServer\\Controllers\\CustomerDetailsController.cs",
+              "ViewState": "AgIAAEcAAAAAAAAAAAAqwGsAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T07:19:01.076Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "AddOrderDto.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs",
@@ -46,25 +80,24 @@
               "RelativeToolTip": "RestaurantManagementServer\\Models\\Dto\\Add\\AddOrderDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T13:31:01.692Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T13:31:01.692Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "OrdersController.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\OrdersController.cs",
               "ToolTip": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "RestaurantManagementServer\\Controllers\\OrdersController.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAxwDgAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwDgAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-26T13:30:54.094Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "FinalTermContext.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Data\\FinalTermContext.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Data\\FinalTermContext.cs",
@@ -72,12 +105,11 @@
               "RelativeToolTip": "RestaurantManagementServer\\Data\\FinalTermContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T13:29:27.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T13:29:27.569Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Order.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Models\\Entities\\Order.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Models\\Entities\\Order.cs",
@@ -85,12 +117,11 @@
               "RelativeToolTip": "RestaurantManagementServer\\Models\\Entities\\Order.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAxwBwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T13:26:32.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T13:26:32.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "SeatsController.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\SeatsController.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\SeatsController.cs",
@@ -98,12 +129,11 @@
               "RelativeToolTip": "RestaurantManagementServer\\Controllers\\SeatsController.cs",
               "ViewState": "AgIAACMAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T13:15:34.61Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-26T13:15:34.61Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "CustomersController.cs",
               "DocumentMoniker": "D:\\RestaurantManagementServer\\Server\\RestaurantManagementServer\\Controllers\\CustomersController.cs",
               "RelativeDocumentMoniker": "RestaurantManagementServer\\Controllers\\CustomersController.cs",
@@ -111,8 +141,7 @@
               "RelativeToolTip": "RestaurantManagementServer\\Controllers\\CustomersController.cs",
               "ViewState": "AgIAACYAAAAAAAAAAAAQwD8AAAAxAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-25T06:12:55.057Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-25T06:12:55.057Z"
             }
           ]
         }
